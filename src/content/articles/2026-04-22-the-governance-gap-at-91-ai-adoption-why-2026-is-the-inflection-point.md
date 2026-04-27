@@ -42,6 +42,11 @@ Ninety-one percent of organizations now use at least one AI coding tool. Only a 
 
 The gap is no longer theoretical. Three converging pressures are forcing engineering leaders to confront it.
 
+<figure class="article-figure">
+  <img src="/generated/articles/2026-04-22-the-governance-gap-at-91-ai-adoption-hero.webp" alt="Abstract governance image showing a widening gap between high AI adoption metrics and low governance maturity scores, with red regulatory deadline markers approaching for an article about the inflection point in AI coding governance." />
+  <figcaption>Adoption has already crossed the chasm; governance is still building the bridge. The inflection point is the gap between velocity and evidence.</figcaption>
+</figure>
+
 ## The Security Reality
 
 Veracode's 2025 GenAI Code Security Report tested 100+ LLMs across 80 curated coding tasks. The result: AI introduced security vulnerabilities in 45% of cases [Veracode](https://veracode.com/research/genai-security-report). Aikido Security's 2026 survey of 450 developers found one in five organizations reported a serious security incident linked to AI-generated code [Aikido Security](https://aikidosecurity.com/blog/ai-code-security-survey-2026).
@@ -65,6 +70,11 @@ Two developments signal that the market is finally addressing the governance gap
 This multi-tool reality is exactly [the multi-tool governance gap](/articles/2026-04-12-the-multi-tool-governance-gap-why-2026-ai-frameworks-fail-engineering-teams/): when teams orchestrate Cursor, Claude Code, and GitHub Copilot within the same repository, existing governance frameworks designed for single-tool adoption create visibility blind spots.
 
 TrueFoundry's VPC-deployed AI Gateway pattern represents the architectural response: intercept all AI coding traffic inside customer cloud accounts (AWS/GCP/Azure), control model access, enforce budget and rate limits per team, allowlist approved MCP servers, and capture full audit logs exportable via OpenTelemetry for SOC 2, HIPAA, and EU AI Act compliance [TrueFoundry](https://truefoundry.com/blog/ai-gateway-vpc-pattern).
+
+<figure class="article-figure">
+  <img src="/generated/articles/2026-04-22-the-governance-gap-at-91-ai-adoption-support.webp" alt="Abstract governance image showing infrastructure patterns converging—agent control planes, context versioning, and audit trails—as a response to the governance gap for an article about technical enforcement." />
+  <figcaption>The response is technical, not cosmetic: tool activity has to pass through control gates until it becomes context, evidence, and audit-surviving artifacts.</figcaption>
+</figure>
 
 The missing piece is a discipline that treats context as the control surface. That is what [context engineering as the missing governance layer](/articles/2026-04-24-context-engineering-the-missing-governance-layer-for-enterprise-ai-coding/) describes: governance must happen at the context layer, before code is generated, not after it is reviewed.
 
