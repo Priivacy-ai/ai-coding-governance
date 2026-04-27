@@ -1,0 +1,132 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import StoryCard from '../components/StoryCard.astro';
+import {
+	PRIMARY_CTA,
+	PRIMARY_CTA_LABEL,
+	SITE_DESCRIPTION,
+	SITE_STATUS,
+	SITE_TITLE,
+} from '../consts';
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+const featured = articles[0];
+const archive = articles.slice(1, 5);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero-panel">
+				<div class="hero-panel__copy">
+					<span class="section-eyebrow">AI coding governance for production teams</span>
+					<h1>See where AI coding creates risk, and how to control it.</h1>
+					<p class="hero-panel__lede">
+						Source-grounded analysis for leaders who need traceable context, specification-driven work,
+						audit trails, compliance evidence, and accountable generated code before it reaches production.
+					</p>
+					<div class="hero-panel__stats">
+						<div class="hero-stat">
+							<strong>{articles.length}</strong>
+							<span>Analyses on AI coding governance</span>
+						</div>
+						<div class="hero-stat">
+							<strong>2026</strong>
+							<span>Regulatory and agentic adoption pressure</span>
+						</div>
+						<div class="hero-stat">
+							<strong>0</strong>
+							<span>Room for invisible agent changes</span>
+						</div>
+					</div>
+				</div>
+				<div class="hero-panel__rail">
+					<span class="signal-chip">{SITE_STATUS}</span>
+					<div class="ops-card">
+						<p class="site-footer__title">For engineering leaders</p>
+						<p>
+							How do you prove what agents touched, why it changed, and who accepted the risk before
+							it reaches production?
+						</p>
+					</div>
+					<div class="ops-card">
+						<p class="site-footer__title">For platform teams</p>
+						<p>
+							Practical lenses on context engineering, spec-driven workflows, audit trails, and
+							the control surfaces needed around AI coding tools.
+						</p>
+					</div>
+					<p><a href={PRIMARY_CTA}>{PRIMARY_CTA_LABEL}</a></p>
+				</div>
+			</section>
+
+			<section class="section-stack">
+				<div>
+					<p class="section-eyebrow">The risk to watch now</p>
+					<h2>Start with the newest risk map for accountable AI coding.</h2>
+				</div>
+				{
+					featured ? (
+						<div class="story-grid">
+							<StoryCard article={featured} featured={true} />
+						</div>
+					) : (
+						<div class="empty-state">
+							<h3>No field note has been published yet.</h3>
+							<p>
+								The site is ready for source-grounded analysis on AI coding governance, agentic
+								workflows, and engineering accountability.
+							</p>
+						</div>
+					)
+				}
+			</section>
+
+			<section class="section-stack">
+				<div>
+					<p class="section-eyebrow">More analysis</p>
+					<h2>Recent AI coding governance dossiers</h2>
+				</div>
+				{
+					archive.length ? (
+						<div class="archive-list">
+							{
+								archive.map((entry) => (
+									<a class="archive-row" href={`/articles/${entry.id}/`}>
+										<div class="archive-row__thumb" aria-hidden="true">
+											{
+												entry.data.heroImage ? (
+													<img src={entry.data.heroImage.src} alt="" loading="lazy" />
+												) : (
+													<span>Render pending</span>
+												)
+											}
+										</div>
+										<div class="archive-row__body">
+											<h3>{entry.data.title}</h3>
+											<p>{entry.data.excerpt}</p>
+										</div>
+										<div class="meta">{entry.data.publishDate.toLocaleDateString('en-US', { dateStyle: 'medium' })}</div>
+									</a>
+								))
+							}
+						</div>
+					) : (
+						<p class="hero-panel__lede">More field notes will appear here as the research library grows.</p>
+					)
+				}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

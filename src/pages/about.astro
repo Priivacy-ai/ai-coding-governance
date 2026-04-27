@@ -1,0 +1,70 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import VisualOdyssey from '../components/VisualOdyssey.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="section-stack">
+				<div>
+					<p class="section-eyebrow">About this site</p>
+					<h1>Built for teams who need accountable AI coding, not generic AI commentary.</h1>
+					<p class="hero-panel__lede">
+						Field Notes tracks the practical governance layer around AI coding agents: context control,
+						specification-driven workflows, audit trails, compliance evidence, and engineering accountability.
+					</p>
+				</div>
+				<div class="method-grid">
+					<div class="method-card" style="grid-column: span 4;">
+						<p class="site-footer__title">Audience</p>
+						<p>
+							The intended reader is an engineering, platform, security, or product leader deciding how
+							to make agentic coding safe enough for production.
+						</p>
+					</div>
+					<div class="method-card" style="grid-column: span 4;">
+						<p class="site-footer__title">Editorial bar</p>
+						<p>
+							Articles should name evidence, distinguish facts from inference, and avoid vague market
+							mood unless a specific person or firm is actually saying something relevant.
+						</p>
+					</div>
+					<div class="method-card" style="grid-column: span 4;">
+						<p class="site-footer__title">Privacy boundary</p>
+						<p>
+							The public site should never expose private working paths, local machine details, internal
+							tool names, or production notes that do not help the reader.
+						</p>
+					</div>
+				</div>
+				<div class="ops-card">
+					<p class="site-footer__title">How the research loop runs</p>
+					<p>
+						This site is maintained by an autonomous agent loop running on a Mac Studio, using local
+						inference against Qwen models to keep researching the state of the industry around agentic
+						coding governance. The loop keeps looking for new evidence, investor and operator signals,
+						regulatory pressure, technical control patterns, and product movement across the AI coding
+						stack.
+					</p>
+					<p>
+						Each piece is still checked before publication for source support, audience relevance,
+						public-facing framing, privacy boundaries, visual fit, and build health. The point of the
+						loop is not to make process the story. It is to keep the reader supplied with timely,
+						source-grounded judgment about where AI coding governance is moving next.
+					</p>
+				</div>
+			</section>
+			<VisualOdyssey />
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,36 @@
+# Publishing Checklist
+
+- Every public headline, lede, section label, article card, sidebar, image, link, and CTA answers the north-star question: "What's the value to the reader?"
+- Editorial report includes exact source URLs and a pass verdict.
+- Editorial report checks every statistic, percentage, dollar figure, time claim, adoption rate, survey finding, benchmark number, and quantified comparison against a source URL that proves it.
+- Editorial report includes a reference-body plan so each retained source has a natural in-body hyperlink.
+- Editorial report includes an internal cross-reference plan based on the existing published Field Notes library, with 1-3 body-link candidates or a clear reason no internal link fits.
+- Editorial report checks the manual author/operator voice seeds and shared investor/angel voice signals file, then either uses relevant named signals or records why they were rejected.
+- Editorial report treats context engineering for AI coding agents as core Spec Kitty territory and defaults to `include-link` for those articles.
+- Any article making a concrete claim about how Spec Kitty works checks `https://docs.spec-kitty.ai/` and uses docs-backed language.
+- Any article making a concrete claim about Spec Kitty architecture, maturity, version history, state model, or agent ecosystem checks `https://docs.spec-kitty.ai/assets/spec-kitty-evolution-v1-to-v3.html` and uses docs-backed language.
+- Style guide review confirms the article fits the house voice.
+- Style guide review confirms any author, operator, or investor commentary is named, sourced, and not vague market chatter.
+- Style guide review includes public-surface safety notes for summaries, excerpts, and article rails.
+- Style guide review includes a reader-value test for headline, lede, frontmatter, sidebars, and links.
+- Audience context review confirms the article is framed for engineering, platform, security, or product leaders adopting AI coding agents.
+- Audience context review explicitly answers "What's the value to the reader?" for the headline, lede, article card, article rail, images, and CTA.
+- Audience context review blocks fourth-wall leaks: local filesystem paths, source-vault references, internal tool/model names, controller/underling labels, and production mechanics that do not help the reader.
+- About-page methodology may mention the autonomous research loop, Mac Studio, local inference, and Qwen only at a high level. The same details are blocked from articles, homepage copy, RSS, metadata, and source notes.
+- Public-facing summaries, headers, social cards, and article metadata do not mention editorial corrections or how the article was produced.
+- Every reference URL appears as a text hyperlink in the article body, and every external body hyperlink appears in the references list.
+- Every statistic used in public article copy has a nearby in-body hyperlink to the source proving that exact number; unsourced statistics are removed or rewritten.
+- Every article with at least one relevant published companion piece includes at least one natural in-body link to another Field Note. Internal links should clarify the reader's mental map of the argument, not merely advertise the archive.
+- Any context-engineering article about AI coding includes a natural in-body Spec Kitty link unless the topic is clearly unrelated to coding-agent context control.
+- Design review confirms the page shell still fits the publication system.
+- Design review includes a Gemini vision status line: `complete`, `skipped-auth`, `skipped-disabled`, or a concrete failure state.
+- Design review includes controller visual QA expectations and confirms article lists use distinct thumbnails.
+- Image review includes an OpenAI image-generation status line.
+- Image review passes only when OpenAI image generation completed; local fallback images are draft scaffolding, not publishable article art.
+- Image render manifest exists, generated assets are present, and hero/support prompts are tailored to the article's tension and story beats.
+- Image review includes a visual distinctness check against other published articles so the translation chamber remains an idiom, not a repeated template.
+- Image review includes a sitewide image inventory before choosing the article's visual story.
+- Astro build passes locally.
+- Controller-owned 404 link check passes locally: no missing internal routes/assets, missing anchors, malformed links, or definite external 404/410 responses.
+- Publishing review records whether git push is live or blocked on remote setup.
+- Site-ops review records local health and, when configured, remote workflow status.

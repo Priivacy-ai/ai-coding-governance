@@ -1,0 +1,64 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'articles'>['data'];
+
+const {
+	title,
+	description,
+	editorialSummary,
+	excerpt,
+	heroImage,
+	publishDate,
+	references,
+	tags,
+} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={heroImage?.src} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article class="article-shell">
+				<div class="article-main">
+					<header class="article-header">
+						<p class="section-eyebrow">Published dossier</p>
+						<h1>{title}</h1>
+						<p class="hero-panel__lede">{excerpt}</p>
+						<div class="article-header__meta">
+							<span>{publishDate.toLocaleDateString('en-US', { dateStyle: 'full' })}</span>
+							<span>{references.length} references</span>
+						</div>
+						<ul class="tag-list">
+							{tags.map((tag) => <li>{tag}</li>)}
+						</ul>
+					</header>
+
+					<div class="article-prose">
+						<slot />
+					</div>
+				</div>
+
+				<aside class="article-rail">
+					<div class="ops-card">
+						<p class="site-footer__title">Why it matters</p>
+						<p>{editorialSummary || description}</p>
+					</div>
+					<div class="ops-card">
+						<p class="site-footer__title">References</p>
+						<ul>
+							{references.map((reference) => <li><a href={reference.url}>{reference.label}</a></li>)}
+						</ul>
+					</div>
+				</aside>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

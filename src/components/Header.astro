@@ -1,0 +1,36 @@
+---
+import LogoMark from './LogoMark.astro';
+import { NAV_LINKS, SITE_STATUS, SITE_TITLE } from '../consts';
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => {
+	if (href === '/') return currentPath === '/';
+	return currentPath === href || currentPath.startsWith(`${href}/`);
+};
+---
+
+<header class="site-header">
+	<div class="site-header__band">
+		<p>AI coding governance</p>
+		<p>{SITE_STATUS}</p>
+	</div>
+	<nav class="site-nav" aria-label="Primary">
+		<div class="site-nav__image-field" aria-hidden="true"></div>
+		<a class="site-nav__brand" href="/">
+			<span class="site-nav__mark"><LogoMark /></span>
+			<span>
+				<strong>{SITE_TITLE}</strong>
+				<small>Evidence for teams governing agentic coding.</small>
+			</span>
+		</a>
+		<div class="site-nav__links">
+			{
+				NAV_LINKS.map((item) => (
+					<a href={item.href} class={isActive(item.href) ? 'is-active' : undefined} aria-current={isActive(item.href) ? 'page' : undefined}>
+						<span>{item.label}</span>
+					</a>
+				))
+			}
+		</div>
+	</nav>
+</header>

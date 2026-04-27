@@ -1,0 +1,66 @@
+---
+const { compact = false } = Astro.props;
+
+const panels = [
+	{
+		label: '01',
+		title: 'Interior weather',
+		image: '/generated/site/odyssey-01-interior-weather.webp',
+		alt: 'Abstract ivory and charcoal field of probability traces, memory shards, and muted cyan attention paths before governance is applied.',
+		body: 'The model appears first as pressure, recall, and partial attention rather than a finished claim.',
+	},
+	{
+		label: '02',
+		title: 'Boundary forms',
+		image: '/generated/site/odyssey-02-context-pressure.webp',
+		alt: 'Abstract context windows and amber boundary membranes compressing cyan traces into a governed threshold.',
+		body: 'Scope, ambiguity, and context limits start shaping what can responsibly move forward.',
+	},
+	{
+		label: '03',
+		title: 'Evidence capture',
+		image: '/generated/site/odyssey-03-evidence-capture.webp',
+		alt: 'A translation chamber where model traces become layered audit cards, provenance rails, and red verification brackets.',
+		body: 'Inference becomes something humans can cite, challenge, and inspect.',
+	},
+	{
+		label: '04',
+		title: 'Control gate',
+		image: '/generated/site/odyssey-04-control-gate.webp',
+		alt: 'A red and amber governance gate interrupting risky fragments while clean cyan traces continue through paper ledgers.',
+		body: 'The system pauses, separates useful signal from unsupported risk, and records the decision surface.',
+	},
+	{
+		label: '05',
+		title: 'Living ledger',
+		image: '/generated/site/odyssey-05-living-ledger.webp',
+		alt: 'Orderly ivory ledgers, provenance paths, and feedback loops returning from public release into abstract model space.',
+		body: 'Publication is treated as a checkpoint in a continuing review loop, not the end of responsibility.',
+	},
+];
+---
+
+<section class:list={['visual-odyssey', compact && 'visual-odyssey--compact']}>
+	<div class="visual-odyssey__intro">
+		<p class="section-eyebrow">Visual grammar</p>
+		<h2>A five-part odyssey for the governance idiom.</h2>
+		<p>
+			The site imagery now has a non-article backbone: model interiority, boundary pressure,
+			evidence capture, governance intervention, and accountable release.
+		</p>
+	</div>
+	<div class="visual-odyssey__grid">
+		{
+			panels.map((panel) => (
+				<figure class="visual-odyssey__panel">
+					<img src={panel.image} alt={panel.alt} loading="lazy" decoding="async" />
+					<figcaption>
+						<span>{panel.label}</span>
+						<strong>{panel.title}</strong>
+						<p>{panel.body}</p>
+					</figcaption>
+				</figure>
+			))
+		}
+	</div>
+</section>
