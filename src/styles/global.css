@@ -825,6 +825,15 @@ h1 + .hero-panel__lede {
 	color: var(--ink);
 }
 
+.site-footer__note {
+	grid-column: 1 / -1;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border-soft);
+	font-family: var(--font-mono);
+	font-size: 0.86rem;
+	letter-spacing: 0.03em;
+}
+
 .empty-state {
 	padding: 2rem;
 	border-radius: 1.5rem;

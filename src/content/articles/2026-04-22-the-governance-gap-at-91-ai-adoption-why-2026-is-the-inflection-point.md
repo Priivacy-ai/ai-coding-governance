@@ -20,6 +20,8 @@ supportImage:
   src: "/generated/articles/2026-04-22-the-governance-gap-at-91-ai-adoption-support.webp"
   alt: "Abstract governance image showing infrastructure patterns converging—agent control planes, context versioning, and audit trails—as a response to the governance gap for an article about technical enforcement."
 references:
+  - label: "DX — AI-assisted engineering: Q4 impact report"
+    url: "https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/"
   - label: "Veracode 2025 GenAI Code Security Report"
     url: "https://veracode.com/research/genai-security-report"
   - label: "Aikido Security 2026 Developer Survey"
@@ -38,7 +40,7 @@ references:
     url: "https://spec-kitty.ai/"
 ---
 
-Ninety-one percent of organizations now use at least one AI coding tool. Only a small fraction operate at maturity levels where AI delivers compounding returns. That leaves most of the industry in a gap: using AI at scale without the governance infrastructure to control it.
+[DX's Q4 2025 impact report](https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/), based on actual AI coding assistant usage data from 135,000+ developers across 435 companies, puts engineering-organization AI coding assistant adoption at 91%. Only a small fraction operate at maturity levels where AI delivers compounding returns. That leaves most of the industry in a gap: using AI at scale without the governance infrastructure to control it.
 
 The gap is no longer theoretical. Three converging pressures are forcing engineering leaders to confront it.
 
