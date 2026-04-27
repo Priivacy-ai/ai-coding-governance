@@ -3,8 +3,9 @@
   "github_repo": "git@github.com:Priivacy-ai/ai-coding-governance.git",
   "publish_remote": "origin",
   "publish_branch": "main",
-  "publish_enabled": true,
-  "remote_verification_enabled": true,
+  "publish_enabled": false,
+  "manual_review_required": true,
+  "remote_verification_enabled": false,
   "article_source_dir": "/Users/robert/CoWork/Obsidian/AI-Coding-Governance-Vault/articles",
-  "notes": "GitHub Actions publishes the Astro dist artifact to GitHub Pages for the custom domain."
+  "notes": "GitHub Actions publishes pushed commits to GitHub Pages, but future article publishing is held for Robert's explicit review before any push."
 }

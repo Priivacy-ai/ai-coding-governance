@@ -32,5 +32,6 @@
 - Image review includes a sitewide image inventory before choosing the article's visual story.
 - Astro build passes locally.
 - Controller-owned 404 link check passes locally: no missing internal routes/assets, missing anchors, malformed links, or definite external 404/410 responses.
-- Publishing review records whether git push is live or blocked on remote setup.
-- Site-ops review records local health and, when configured, remote workflow status.
+- Publishing review records whether the article is local-ready and confirms remote publish is pending Robert's explicit review.
+- Future article publishing must not push to `main` automatically; GitHub Actions deployment is triggered only after Robert approves the prepared change and a push happens.
+- Site-ops review records local health and, only after a reviewed push, remote workflow status.
