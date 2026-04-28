@@ -38,9 +38,14 @@ references:
     url: "https://baincapitalventures.com/insight/vc-insights-2025-ai-trends-startup-growth-and-2026-predictions/"
 ---
 
-AI is reportedly writing 90% of lines of code at Anthropic. Combined with a research paper led by Magnus Palmblad at NIST on agentic AI-assisted coding [arXiv](https://arxiv.org/abs/2604.21744), this observation lands with specific force: when agents dominate production workflows, the bottleneck shifts from generation to validity assurance and governed context management.
+AI is reportedly writing the majority of code at frontier organizations. Combined with a research paper led by Magnus Palmblad at NIST on agentic AI-assisted coding [arXiv](https://arxiv.org/abs/2604.21744), this observation lands with specific force: when agents dominate production workflows, the bottleneck shifts from generation to validity assurance and governed context management.
 
 This is the constraint shift that the market is only beginning to price in.
+
+<figure class="article-figure">
+  <img src="/generated/articles/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-hero.webp" alt="Abstract governance image showing constraint layers collapsing from implicit prompt-scoped context to explicit field-scoped epistemic grounding for an article about the constraint shift in AI coding." />
+  <figcaption>A radial pressure chamber: crowded agent activity at the edge, sparse governance evidence at the center, and a red constraint ring closing the distance between output speed and accountable control.</figcaption>
+</figure>
 
 ## The Missing Layer: Field-Scoped Epistemic Grounding
 
@@ -66,11 +71,16 @@ The capital markets are converging on the same thesis:
 
 **Emergent Ventures** (Aditi Kothari) backed Potpie AI's $2.2M pre-seed round explicitly for spec-driven development in enterprise codebases. The framing: the constraint shifted from coding to maintenance and assurance. [LinkedIn](https://www.linkedin.com/posts/aditi-kothari_we-are-announcing-potpie-ais-22m-pre-seed-activity-7431689556380434432-OfLb)
 
-**Konstantin Vinogradov** (Open Source Endowment) has direct portfolio overlap with OSS AI infrastructure — Mastra ($13M seed), Twenty, Archestra, Entire.io — validating the agentic coding governance thesis. [personal site](https://kvinogradov.com/)
+**Konstantin Vinogradov** (Open Source Endowment) has direct portfolio overlap with OSS AI infrastructure — Mastra, Twenty, Archestra, Entire.io — validating the agentic coding governance thesis. [personal site](https://kvinogradov.com/)
 
 **a16z** partners Guido Appenzeller and Yoko Li explicitly frame the plan → code → review loop as the basic AI coding workflow, with agentic loops and developer review at each stage. [a16z essay](https://a16z.com/the-trillion-dollar-ai-software-development-stack/)
 
-**Bain Capital Ventures** partner Rak Garg frames "scaffolding: boundaries, context, monitoring and feedback loops" as the governance layer for AI agents — directly aligned with the context engineering thesis. [Bain Capital Ventures](https://baincapitalventures.com/insight/vc-insights-2025-ai-trends-startup-growth-and-2026-predictions/)
+**Saanya Ojha** at Bain Capital Ventures frames "the next wave of value won't come from raw model quality alone, but from the scaffolding that enables these systems to operate safely, predictably and productively inside organizations." [Bain Capital Ventures](https://baincapitalventures.com/insight/vc-insights-2025-ai-trends-startup-growth-and-2026-predictions/)
+
+<figure class="article-figure">
+  <img src="/generated/articles/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-support.webp" alt="Abstract governance image showing GROUNDING.md-style hard constraints and convention parameters overriding all other contexts during agent orchestration." />
+  <figcaption>The response is structural, not cosmetic: traces only become shippable when they pass through constraint layers, inspection gates, and evidence surfaces that survive handoffs.</figcaption>
+</figure>
 
 ## The Context Engineering Specification Layer
 
