@@ -23,19 +23,21 @@ references:
   - label: "DX — AI-assisted engineering: Q4 impact report"
     url: "https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/"
   - label: "Veracode 2025 GenAI Code Security Report"
-    url: "https://veracode.com/research/genai-security-report"
+    url: "https://www.veracode.com/wp-content/uploads/2025_GenAI_Code_Security_Report_Final.pdf"
   - label: "Aikido Security 2026 Developer Survey"
-    url: "https://aikidosecurity.com/blog/ai-code-security-survey-2026"
-  - label: "GitHub Changelog — Copilot Enterprise Controls GA (Feb 26, 2026)"
-    url: "https://github.blog/changelog/2026-02-26-copilot-enterprise-controls-ga"
-  - label: "GitHub Changelog — Copilot Training Policy (Apr 2, 2026)"
-    url: "https://github.blog/changelog/2026-04-02-copilot-interactions-training-default"
+    url: "https://www.aikido.dev/reports/2026-state-of-ai-in-security-development"
+  - label: "GitHub Docs — MCP allowlist enforcement"
+    url: "https://docs.github.com/en/copilot/reference/mcp-allowlist-enforcement"
+  - label: "GitHub Blog — Copilot interaction data usage policy"
+    url: "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/"
   - label: "Augment Code — EU AI Act Compliance Guide"
-    url: "https://www.augmentcode.com/resources/eu-ai-act-compliance-guide"
+    url: "https://www.augmentcode.com/guides/eu-ai-act-2026"
   - label: "Packmind — Context Engineering Report"
     url: "https://packmind.io/context-engineering-report"
-  - label: "TrueFoundry — AI Gateway VPC Pattern"
-    url: "https://truefoundry.com/blog/ai-gateway-vpc-pattern"
+  - label: "TrueFoundry — AI Gateway"
+    url: "https://www.truefoundry.com/ai-gateway"
+  - label: "TrueFoundry Docs — AI Gateway"
+    url: "https://www.truefoundry.com/docs/ai-gateway"
   - label: "Spec Kitty — agentic coding specification and governance layer"
     url: "https://spec-kitty.ai/"
 ---
@@ -51,7 +53,7 @@ The gap is no longer theoretical. Three converging pressures are forcing enginee
 
 ## The Security Reality
 
-Veracode's 2025 GenAI Code Security Report tested 100+ LLMs across 80 curated coding tasks. The result: AI introduced security vulnerabilities in 45% of cases [Veracode](https://veracode.com/research/genai-security-report). Aikido Security's 2026 survey of 450 developers found one in five organizations reported a serious security incident linked to AI-generated code [Aikido Security](https://aikidosecurity.com/blog/ai-code-security-survey-2026).
+Veracode's 2025 GenAI Code Security Report tested 100+ LLMs across 80 curated coding tasks. The result: AI introduced security vulnerabilities in 45% of cases [Veracode](https://www.veracode.com/wp-content/uploads/2025_GenAI_Code_Security_Report_Final.pdf). Aikido Security's 2026 survey of 450 developers found one in five organizations reported a serious security incident linked to AI-generated code [Aikido Security](https://www.aikido.dev/reports/2026-state-of-ai-in-security-development).
 
 These numbers matter more each month because the attack surface is expanding. The dominant 2026 workflow puts AI coding tools outside the IDE with full codebase access—including file read/write, terminal command execution in agentic modes, and external system access via MCP, A2A, and skill files. Most security teams have zero visibility into what these tools actually read, write, and execute.
 
@@ -59,19 +61,19 @@ These numbers matter more each month because the attack surface is expanding. Th
 
 The EU AI Act's high-risk obligations take effect August 2, 2026. That is approximately four months from today.
 
-Standard coding assistants likely fall outside Annex III high-risk scope. But agentic workflows with code execution capabilities do not [Augment Code](https://www.augmentcode.com/resources/eu-ai-act-compliance-guide). The distinction matters for any team using Claude Code, Devin, or similar autonomous agents.
+Standard coding assistants likely fall outside Annex III high-risk scope. But agentic workflows with code execution capabilities do not [Augment Code](https://www.augmentcode.com/guides/eu-ai-act-2026). The distinction matters for any team using Claude Code, Devin, or similar autonomous agents.
 
 ## The Infrastructure Response
 
 Two developments signal that the market is finally addressing the governance gap.
 
-**GitHub Copilot Enterprise controls are now generally available.** Since February 26, 2026, the agent control plane, MCP server allowlist policies, and session activity tracking have been production-ready [GitHub](https://github.blog/changelog/2026-02-26-copilot-enterprise-controls-ga). Starting April 24, 2026, GitHub will use Copilot interactions to train Microsoft AI models by default unless users opt out—Copilot Business and Enterprise customers remain exempt under existing contracts, but the policy shift is itself a governance wake-up call for organizations on lower tiers [GitHub](https://github.blog/changelog/2026-04-02-copilot-interactions-training-default).
+**GitHub Copilot governance controls are becoming more explicit.** GitHub now documents MCP allowlist enforcement for organizations and enterprises [GitHub Docs](https://docs.github.com/en/copilot/reference/mcp-allowlist-enforcement). Starting April 24, 2026, GitHub says Copilot Free, Pro, and Pro+ interaction data may be used to train and improve AI models unless users opt out; Copilot Business and Enterprise customers are not affected by that update [GitHub Blog](https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/).
 
 **ContextOps is emerging as a distinct discipline.** Packmind defines ContextOps as the systematic creation, governance, and distribution of context across teams, tools, and repositories [Packmind](https://packmind.io/context-engineering-report). With developers using 3+ AI tools in parallel at 59% [Qodo via Packmind](https://packmind.io/context-engineering-report), organizations that treat engineering playbooks as versioned artifacts—and automatically feed them to AI coding assistants—produce measurably higher-quality output.
 
 This multi-tool reality is exactly [the multi-tool governance gap](/articles/2026-04-12-the-multi-tool-governance-gap-why-2026-ai-frameworks-fail-engineering-teams/): when teams orchestrate Cursor, Claude Code, and GitHub Copilot within the same repository, existing governance frameworks designed for single-tool adoption create visibility blind spots.
 
-TrueFoundry's VPC-deployed AI Gateway pattern represents the architectural response: intercept all AI coding traffic inside customer cloud accounts (AWS/GCP/Azure), control model access, enforce budget and rate limits per team, allowlist approved MCP servers, and capture full audit logs exportable via OpenTelemetry for SOC 2, HIPAA, and EU AI Act compliance [TrueFoundry](https://truefoundry.com/blog/ai-gateway-vpc-pattern).
+TrueFoundry's AI Gateway represents the architectural response: route AI traffic through an enterprise gateway that can run in customer-controlled environments, manage access and rate limits, support MCP integration, and keep gateway-level audit logs [TrueFoundry](https://www.truefoundry.com/ai-gateway). Its documentation describes the gateway as a proxy layer between applications, model providers, and MCP servers, with observability and metrics for AI traffic [TrueFoundry Docs](https://www.truefoundry.com/docs/ai-gateway).
 
 <figure class="article-figure">
   <img src="/generated/articles/2026-04-22-the-governance-gap-at-91-ai-adoption-support.webp" alt="Abstract governance image showing infrastructure patterns converging—agent control planes, context versioning, and audit trails—as a response to the governance gap for an article about technical enforcement." />

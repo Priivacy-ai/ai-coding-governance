@@ -3,7 +3,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 
 function usage() {
-	console.error('usage: node render-openai-governance-images.mjs --manifest <path>');
+	console.error('usage: node render-openai-tools-images.mjs --manifest <path>');
 	process.exit(2);
 }
 
@@ -82,6 +82,7 @@ async function writeStatus(status) {
 		model,
 		endpoint,
 		manifest: manifestPath,
+		idiom: 'collaboration-lattice',
 		...status,
 	};
 	await fs.mkdir(path.dirname(statusPath), { recursive: true });
@@ -94,12 +95,12 @@ function buildFallbackPrompt(kind) {
 	const subtitle = kind === 'hero' ? manifest.heroSubtitle : manifest.supportSubtitle;
 	const palette = (manifest.palette ?? []).join(', ');
 	return [
-		`Create an abstract editorial image for an AI governance article titled "${manifest.title}".`,
+		`Create an abstract editorial image for an AI tools analyst report titled "${manifest.title}".`,
 		`Use the label "${label}" and reflect this article-specific cue: ${subtitle}.`,
-		`House style: a translation chamber where interior LLM model-space becomes human-accountable evidence.`,
-		`Show latent probability fields, attention traces, memory shards, and tool-call paths crossing a translucent boundary into dossiers, audit cards, compliance gates, and provenance rails.`,
+		'House style: a collaboration lattice where human reviewers and LLM agents coordinate through spec sheets, release signal cards, review gates, evidence rails, and tool handoff paths.',
+		'Make it feel like a governed workbench for spec-driven development tools, not a leaderboard or logo grid.',
 		`Palette cues: ${palette}.`,
-		'Do not include robots, glowing brains, neon cyberpunk, stock photography, logos, or readable brand names.',
+		'Do not include robots, glowing brains, neon cyberpunk, stock photography, logos, readable brand names, or ranking badges.',
 	].join(' ');
 }
 
