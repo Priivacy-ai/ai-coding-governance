@@ -40,6 +40,49 @@ It is not a product grid, a ranking board, or a set of company logos. It is a vi
 
 The collaboration lattice can be radial, matrix-like, layered, diagonal, orbital, archival, or bench-like. Choose the composition that fits the weekly story.
 
+## Canonical Reference Set
+
+Treat the following files as the canonical examples of the tools-report idiom:
+
+- `/public/generated/tools/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-hero.webp`
+- `/public/generated/tools/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-support.webp`
+- `/public/generated/tools/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-hero.webp`
+- `/public/generated/tools/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-support.webp`
+
+These belong in `/public/generated/tools/`, not `/public/generated/articles/`, because they define the distinct weekly-tools lane rather than the governance house lane.
+
+## Exact Visual Idiom
+
+When repeating this idiom, preserve these structural cues:
+
+- **Flat editorial geometry:** broad, clean fields with minimal depth cues and almost no volumetric shading.
+- **Paper-ground warmth:** a warm ivory background with subtle grain, as if printed on lightly textured stock.
+- **Charcoal outlines:** dark charcoal or near-black stroke work that defines the primary shapes.
+- **Muted teal routing lines:** thick and thin teal paths that read as data flow, handoff routes, or coordination lanes.
+- **Amber document blocks:** small ochre or amber cards, tabs, folders, or inset modules standing in for specs, releases, or evidence packets.
+- **Signal-red controls:** red brackets, gates, bars, corner marks, or interrupt rails that imply review authority and checkpoints.
+- **Sparse UI symbolism:** boxes, tabs, sliders, brackets, folders, and ledger-like lines, but no readable interface text.
+- **Poster-like composition:** strong negative space, crisp silhouette shapes, and a restrained number of elements.
+
+For subject matter, keep the scene centered on **human/LLM collaboration surfaces**:
+
+- houses, workbenches, rails, folders, brackets, ladders, gates, and path junctions are all acceptable metaphors
+- avoid anthropomorphic agents, robot bodies, dashboards full of fake text, and glossy product mockups
+- show collaboration as routing, staging, filtering, checkpointing, and bundling rather than as conversation bubbles or sci-fi beams
+
+The images should feel like:
+
+- a mid-century editorial systems diagram
+- a spec-routing poster
+- a governance-aware toolchain map
+
+They should not feel like:
+
+- the darker governance-house “translation chamber” images
+- photoreal product marketing
+- vector logo collages
+- generic AI futurism
+
 ## Prompt Pattern
 
 Adapt this pattern rather than copying it verbatim:

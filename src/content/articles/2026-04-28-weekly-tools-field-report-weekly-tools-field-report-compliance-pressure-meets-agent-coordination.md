@@ -15,10 +15,10 @@ tags:
   - tooling
 editorialSummary: "Compliance pressure and parallel agent workflows are pushing SDD tools toward a shared buyer test: can they preserve human oversight, review evidence, and context control while LLM agents move faster?"
 heroImage:
-  src: "/generated/articles/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-hero.webp"
+  src: "/generated/tools/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-hero.webp"
   alt: "Abstract tools-landscape image showing a diagonal collaboration lattice where specification cards and requirement sheets feed into a network of tool handoff paths converging on review gates and checkpoint notches, emerging as structured evidence surfaces for an article about compliance pressure meeting agent coordination."
 supportImage:
-  src: "/generated/articles/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-support.webp"
+  src: "/generated/tools/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-support.webp"
   alt: "Abstract tools-landscape image showing parallel agent streams flowing downward through governance negotiation layers — comparison bands, provenance ledgers, and a red review gate — emerging as sparse but legible evidence for an article about parallel agent coordination and governance."
 references:
   - label: "Augment Code — EU AI Act Compliance Comparison"
@@ -48,7 +48,7 @@ This week's tools signal is not a broad market reset. It is a sharper version of
 The strongest weekly move came from Augment Code, which published an EU AI Act comparison of AI coding tools and positioned Intent's living-spec architecture as a compliance record for high-risk software. Cursor supplied the strongest product-velocity signal, adding multitask agents, worktree support, and multi-root workspaces in its Apr. 24 changelog. OpenSpec and BMAD-METHOD stayed strategically important even where this week's evidence is more about maintenance, adoption framing, and ecosystem breadth than a new conceptual turn.
 
 <figure class="article-figure">
-  <img src="/generated/articles/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-hero.webp" alt="Abstract tools-landscape image showing a diagonal collaboration lattice where specification cards and requirement sheets feed into a network of tool handoff paths converging on review gates and checkpoint notches, emerging as structured evidence surfaces for an article about compliance pressure meeting agent coordination." />
+  <img src="/generated/tools/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-hero.webp" alt="Abstract tools-landscape image showing a diagonal collaboration lattice where specification cards and requirement sheets feed into a network of tool handoff paths converging on review gates and checkpoint notches, emerging as structured evidence surfaces for an article about compliance pressure meeting agent coordination." />
   <figcaption>A diagonal collaboration lattice: specification cards feeding into tool handoff paths that converge on review gates and emerge as evidence, visualizing the week's convergence of compliance framing and agent coordination.</figcaption>
 </figure>
 
@@ -128,7 +128,7 @@ SPECLAN is worth tracking because recent release activity around Codex OAuth, lo
 ## Governance Implications
 
 <figure class="article-figure">
-  <img src="/generated/articles/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-support.webp" alt="Abstract tools-landscape image showing parallel agent streams flowing downward through governance negotiation layers — comparison bands, provenance ledgers, and a red review gate — emerging as sparse but legible evidence for an article about parallel agent coordination and governance." />
+  <img src="/generated/tools/2026-04-28-weekly-tools-field-report-weekly-tools-field-report-compliance-pressure-meets-agent-coordination-support.webp" alt="Abstract tools-landscape image showing parallel agent streams flowing downward through governance negotiation layers — comparison bands, provenance ledgers, and a red review gate — emerging as sparse but legible evidence for an article about parallel agent coordination and governance." />
   <figcaption>Parallel agent streams through governance negotiation layers: coordination improved, but governance is still catching up, with the red review gate catching one path entirely while others pass with partial evidence.</figcaption>
 </figure>
 

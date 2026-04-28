@@ -14,10 +14,10 @@ tags:
   - ai-coding
 editorialSummary: "When AI agents dominate production workflows, the bottleneck shifts from code generation to governed context management. Field-scoped epistemic grounding becomes the structural constraint layer that enterprises need."
 heroImage:
-  src: "/generated/articles/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-hero.webp"
+  src: "/generated/tools/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-hero.webp"
   alt: "Abstract governance image showing constraint layers collapsing from implicit prompt-scoped context to explicit field-scoped epistemic grounding for an article about the constraint shift in AI coding."
 supportImage:
-  src: "/generated/articles/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-support.webp"
+  src: "/generated/tools/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-support.webp"
   alt: "Abstract governance image showing GROUNDING.md-style hard constraints and convention parameters overriding all other contexts during agent orchestration."
 references:
   - label: "NIST paper on epistemic grounding in agentic AI-assisted coding"
@@ -43,7 +43,7 @@ AI is reportedly writing the majority of code at frontier organizations. Combine
 This is the constraint shift that the market is only beginning to price in.
 
 <figure class="article-figure">
-  <img src="/generated/articles/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-hero.webp" alt="Abstract governance image showing constraint layers collapsing from implicit prompt-scoped context to explicit field-scoped epistemic grounding for an article about the constraint shift in AI coding." />
+  <img src="/generated/tools/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-hero.webp" alt="Abstract governance image showing constraint layers collapsing from implicit prompt-scoped context to explicit field-scoped epistemic grounding for an article about the constraint shift in AI coding." />
   <figcaption>A radial pressure chamber: crowded agent activity at the edge, sparse governance evidence at the center, and a red constraint ring closing the distance between output speed and accountable control.</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ The capital markets are converging on the same thesis:
 **Saanya Ojha** at Bain Capital Ventures frames "the next wave of value won't come from raw model quality alone, but from the scaffolding that enables these systems to operate safely, predictably and productively inside organizations." [Bain Capital Ventures](https://baincapitalventures.com/insight/vc-insights-2025-ai-trends-startup-growth-and-2026-predictions/)
 
 <figure class="article-figure">
-  <img src="/generated/articles/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-support.webp" alt="Abstract governance image showing GROUNDING.md-style hard constraints and convention parameters overriding all other contexts during agent orchestration." />
+  <img src="/generated/tools/2026-04-27-the-constraint-shift-when-ai-writes-90-of-code-governance-becomes-the-moat-support.webp" alt="Abstract governance image showing GROUNDING.md-style hard constraints and convention parameters overriding all other contexts during agent orchestration." />
   <figcaption>The response is structural, not cosmetic: traces only become shippable when they pass through constraint layers, inspection gates, and evidence surfaces that survive handoffs.</figcaption>
 </figure>
 
