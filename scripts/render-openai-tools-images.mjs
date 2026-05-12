@@ -71,18 +71,26 @@ const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 const openai = manifest.openai ?? {};
 const statusPath = path.resolve(openai.statusPath ?? path.join(path.dirname(manifestPath), 'openai-image-render.json'));
 const endpoint = process.env.OPENAI_IMAGE_ENDPOINT ?? openai.endpoint ?? 'https://api.openai.com/v1/images/generations';
-const model = process.env.OPENAI_IMAGE_MODEL ?? openai.model ?? 'gpt-image-1';
+const editEndpoint = process.env.OPENAI_IMAGE_EDIT_ENDPOINT ?? openai.editEndpoint ?? 'https://api.openai.com/v1/images/edits';
+const model = process.env.OPENAI_IMAGE_MODEL ?? openai.model ?? 'gpt-image-2';
 const outputFormat = process.env.OPENAI_IMAGE_OUTPUT_FORMAT ?? openai.outputFormat ?? 'png';
-const size = process.env.OPENAI_IMAGE_SIZE ?? openai.size ?? '1024x1024';
+const size = process.env.OPENAI_IMAGE_SIZE ?? openai.size ?? '2048x1152';
+const quality = process.env.OPENAI_IMAGE_QUALITY ?? openai.quality ?? 'high';
 const enabled = String(process.env.OPENAI_IMAGE_ENABLED ?? openai.enabled ?? '1').toLowerCase();
+const referenceImage = manifest.referenceImage ?? {};
+const referenceImagePath = referenceImage.path ? path.resolve(referenceImage.path) : null;
 
 async function writeStatus(status) {
 	const payload = {
 		generatedAt: new Date().toISOString(),
 		model,
+		quality,
+		size,
 		endpoint,
+		editEndpoint,
 		manifest: manifestPath,
 		idiom: 'collaboration-lattice',
+		referenceImage: referenceImagePath,
 		...status,
 	};
 	await fs.mkdir(path.dirname(statusPath), { recursive: true });
@@ -112,7 +120,6 @@ function requestBody(prompt) {
 		size,
 		output_format: outputFormat,
 	};
-	const quality = process.env.OPENAI_IMAGE_QUALITY ?? openai.quality;
 	if (quality) {
 		body.quality = quality;
 	}
@@ -125,6 +132,54 @@ function requestBody(prompt) {
 		body.moderation = moderation;
 	}
 	return body;
+}
+
+function appendFormValue(form, key, value) {
+	if (value !== undefined && value !== null && value !== '') {
+		form.append(key, String(value));
+	}
+}
+
+async function requestOptions(prompt) {
+	if (!referenceImagePath) {
+		return {
+			url: endpoint,
+			init: {
+				method: 'POST',
+				headers: {
+					Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(requestBody(prompt)),
+			},
+		};
+	}
+
+	const referenceBytes = await sharp(referenceImagePath).png().toBuffer();
+	const form = new FormData();
+	form.append('model', model);
+	form.append('prompt', prompt);
+	form.append(
+		'image[]',
+		new Blob([referenceBytes], { type: 'image/png' }),
+		`${path.basename(referenceImagePath, path.extname(referenceImagePath))}.png`,
+	);
+	appendFormValue(form, 'n', 1);
+	appendFormValue(form, 'size', size);
+	appendFormValue(form, 'quality', quality);
+	appendFormValue(form, 'output_format', outputFormat);
+	appendFormValue(form, 'background', process.env.OPENAI_IMAGE_BACKGROUND ?? openai.background);
+	appendFormValue(form, 'moderation', process.env.OPENAI_IMAGE_MODERATION ?? openai.moderation);
+	return {
+		url: editEndpoint,
+		init: {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+			},
+			body: form,
+		},
+	};
 }
 
 async function writeImageBytes(outputPath, bytes, imageConfig) {
@@ -170,14 +225,8 @@ async function imageBytesFromResult(result) {
 
 async function generateImage(kind, imageConfig) {
 	const prompt = imageConfig.prompt ?? buildFallbackPrompt(kind);
-	const response = await fetch(endpoint, {
-		method: 'POST',
-		headers: {
-			Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(requestBody(prompt)),
-	});
+	const { url, init } = await requestOptions(prompt);
+	const response = await fetch(url, init);
 	const bodyText = await response.text();
 	let body;
 	try {
@@ -196,6 +245,8 @@ async function generateImage(kind, imageConfig) {
 		kind,
 		outputPath,
 		promptLength: prompt.length,
+		requestEndpoint: url,
+		referenceImage: referenceImagePath,
 		revisedPrompt: body?.data?.[0]?.revised_prompt ?? null,
 	};
 }

@@ -28,6 +28,11 @@
 - Image review includes an OpenAI image-generation status line.
 - Image review passes only when OpenAI image generation completed; local fallback images are draft scaffolding, not publishable article art.
 - Image render manifest exists, generated assets are present, and hero/support prompts are tailored to the article's tension and story beats.
+- Image review reads `public/generated/articles/DESIGN.md` for governance-house images, records the exact design brief path, and applies its translation-chamber constraints.
+- Image review records one seeded-random canonical reference image from `public/generated/articles/` and uses the guidance `like this, but adjusted to the new article's narrative` in the artifact, manifest, and hero/support prompts.
+- Image review reads `public/generated/tools/DESIGN.md` for weekly tools images, records the exact design brief path, outputs assets under `public/generated/tools/`, and applies the collaboration-lattice constraints.
+- Weekly tools image review records one seeded-random canonical reference image from `public/generated/tools/` and uses the same `like this, but adjusted to the new article's narrative` guidance in the artifact, manifest, and hero/support prompts.
+- Image render manifests use `gpt-image-2`, `quality: high`, a high-resolution 16:9 size, and the OpenAI edits endpoint when a reference image is supplied.
 - Image review includes a visual distinctness check against other published articles so the translation chamber remains an idiom, not a repeated template.
 - Image review includes a sitewide image inventory before choosing the article's visual story.
 - Astro build passes locally.

@@ -43,9 +43,19 @@ function escapeXml(value) {
 
 async function writeImage(outputPath, svg) {
 	await fs.mkdir(path.dirname(outputPath), { recursive: true });
-	if (path.extname(outputPath).toLowerCase() === '.png') {
-		await sharp(Buffer.from(svg)).png().toFile(outputPath);
+	const ext = path.extname(outputPath).toLowerCase();
+	const image = sharp(Buffer.from(svg)).resize(1600, 900, { fit: 'cover', position: 'center' });
+	if (ext === '.webp') {
+		await image.webp({ quality: 92 }).toFile(outputPath);
+		return 'webp';
+	}
+	if (ext === '.png') {
+		await image.png().toFile(outputPath);
 		return 'png';
+	}
+	if (ext === '.jpg' || ext === '.jpeg') {
+		await image.jpeg({ quality: 92 }).toFile(outputPath);
+		return 'jpg';
 	}
 	await fs.writeFile(outputPath, svg, 'utf8');
 	return 'svg';

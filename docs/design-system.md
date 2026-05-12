@@ -21,6 +21,7 @@ The site should feel like a cross between a compliance dossier, a newsroom proof
 
 - Prefer OpenAI GPT Image article plates when available, with the procedural renderer as the deterministic fallback.
 - Treat `docs/image-style-guide.md` as the source of truth for article image prompts.
+- Treat `public/generated/articles/` and `public/generated/tools/` as the canonical source-asset lanes for published image files and local image design briefs; do not edit images or briefs in `dist/`.
 - Use abstract editorial plates, not cliche robots or glowing brains.
 - Bridge two perceptual worlds: how an LLM might visualize its own existence as latent space, recursive attention, memory fragments, probability fields, and tool-call traces; and how humans imagine it from the outside as a governed black box, audit artifact, compliance object, or collaborator behind glass.
 - Favor liminal interfaces: one side can feel interior, nonhuman, distributed, and self-modeling; the other side should feel human-facing, legible, paper-based, institutional, and accountable.

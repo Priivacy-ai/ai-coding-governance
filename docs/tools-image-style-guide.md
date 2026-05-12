@@ -51,6 +51,12 @@ Treat the following files as the canonical examples of the tools-report idiom:
 
 These belong in `/public/generated/tools/`, not `/public/generated/articles/`, because they define the distinct weekly-tools lane rather than the governance house lane.
 
+Read `/public/generated/tools/DESIGN.md` alongside this guide before creating or reviewing new weekly tools renders.
+
+Each new weekly tools render must select one seeded-random canonical image from `/public/generated/tools/` and treat it as the continuity anchor with the guidance: `like this, but adjusted to the new article's narrative`. Preserve the flatter tools-lane idiom, material palette, and level of finish; change the weekly story, structure, and emphasis for the new tools article.
+
+Publication renders should use the highest-quality OpenAI image path configured for the site: `gpt-image-2`, `quality: high`, a high-resolution 16:9 request size, and the edits endpoint when a reference image is supplied. Lower-quality or fallback renders are acceptable only for draft layout testing.
+
 ## Exact Visual Idiom
 
 When repeating this idiom, preserve these structural cues:

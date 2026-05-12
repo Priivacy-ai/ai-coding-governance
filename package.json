@@ -7,8 +7,10 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node ./scripts/verify-article-images.mjs",
     "build": "astro build",
     "postbuild": "node ./scripts/write-sitemap-alias.mjs",
+    "verify:images": "node ./scripts/verify-article-images.mjs",
     "verify:local": "node ./scripts/verify-local-dist.mjs",
     "preview": "astro preview",
     "astro": "astro"
