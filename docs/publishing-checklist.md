@@ -35,6 +35,10 @@
 - Image render manifests use `gpt-image-2`, `quality: high`, a high-resolution 16:9 size, and the OpenAI edits endpoint when a reference image is supplied.
 - Image review includes a visual distinctness check against other published articles so the translation chamber remains an idiom, not a repeated template.
 - Image review includes a sitewide image inventory before choosing the article's visual story.
+- Social-card image uses the same visual as the article-card hero thumbnail. When the hero is WebP, a matching `.jpg` social-card asset exists beside it.
+- Built article metadata points `og:image` and `twitter:image` at the hero-derived JPEG, not at WebP, a source/company/product image, or the support image.
+- Built article metadata includes `og:image:type: image/jpeg`, `og:image:width: 1600`, and `og:image:height: 900` for generated article social cards.
+- A URL with poisoned social-card cache must be retired by republishing the article at a fresh slug and verifying canonical URL, `og:url`, `og:image`, and `twitter:image`.
 - Astro build passes locally.
 - Controller-owned 404 link check passes locally: no missing internal routes/assets, missing anchors, malformed links, or definite external 404/410 responses.
 - Publishing review records whether the article is local-ready and confirms remote publish is pending Robert's explicit review.
