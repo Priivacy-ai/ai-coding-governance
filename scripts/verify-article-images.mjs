@@ -141,6 +141,14 @@ for (const filePath of await listMarkdownFiles(articlesRoot)) {
 		{ label: 'supportImage.src', src: readBlockScalar(frontmatter, 'supportImage', 'src') },
 		...collectBodyImageSources(body),
 	];
+	const heroImage = readBlockScalar(frontmatter, 'heroImage', 'src');
+
+	if (heroImage.endsWith('.webp')) {
+		requiredImages.push({
+			label: 'social hero image',
+			src: heroImage.replace(/\.webp$/, '.jpg'),
+		});
+	}
 
 	for (const image of requiredImages) {
 		if (!image.src) {
