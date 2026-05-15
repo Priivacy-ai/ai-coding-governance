@@ -20,14 +20,14 @@ supportImage:
   alt: "Abstract forensic chamber showing minimal tagging patterns as versioned context packets that deliver traceability without breaking developer flow."
 references:
   - label: "GitHub — Copilot by the Numbers (92% adoption)"
-    url: "https://github.blog/2024-09-18-github-copilot-by-the-numbers-5-million-developers-and-growing/"
+    url: "https://venturebeat.com/ai/92-us-based-developers-already-using-ai-powered-coding-tools-at-work/"
   - label: "Deloitte — State of AI Governance Maturity (9% ready)"
     url: "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html"
-  - label: "Augment Code — The Governance Paradox (91% struggle)"
-    url: "https://www.augmentcode.com/resources/governance-paradox"
+  - label: "Quest Global — AI Governance Paradox"
+    url: "https://www.questglobal.com/wp-content/uploads/2025/12/AI-Governance-Paradox_Tinku-Suraj_V4_RM_SH.pdf"
 ---
 
-If you're reading this as a CISO, board member, or engineering leader, here's the uncomfortable truth: **92% of developers are using AI coding tools**[<sup>1</sup>](https://github.blog/2024-09-18-github-copilot-by-the-numbers-5-million-developers-and-growing/), yet only **9% of enterprises are "Ready"** for AI governance maturity[<sup>2</sup>](https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html).
+If you're reading this as a CISO, board member, or engineering leader, here's the uncomfortable truth: **92% of developers are using AI coding tools**[<sup>1</sup>](https://venturebeat.com/ai/92-us-based-developers-already-using-ai-powered-coding-tools-at-work/), yet only **9% of enterprises are "Ready"** for AI governance maturity[<sup>2</sup>](https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html).
 
 That gap isn't just a compliance problem—it's an operational crisis waiting to happen.
 
@@ -40,7 +40,7 @@ That gap isn't just a compliance problem—it's an operational crisis waiting to
 
 ## Why Traditional Governance Fails
 
-The core issue is what Augment Code calls the **"governance paradox"**: 91% of enterprises struggle because they're trying to govern something that moves faster than their governance processes[<sup>3</sup>](https://www.augmentcode.com/resources/governance-paradox).
+The core issue is the **"governance paradox"**: enterprises are trying to govern something that moves faster than their governance processes[<sup>3</sup>](https://www.questglobal.com/wp-content/uploads/2025/12/AI-Governance-Paradox_Tinku-Suraj_V4_RM_SH.pdf).
 
 When developers iterate in minutes using AI pair programming, and your compliance team requires weeks of review cycles, you don't get better security. You get workarounds. Shadow AI. Uncontrolled experimentation—see [context engineering as the missing governance layer](/articles/2026-04-24-context-engineering-the-missing-governance-layer-for-enterprise-ai-coding/) for how governed context surfaces address this gap.
 

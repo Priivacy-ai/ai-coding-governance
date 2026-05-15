@@ -75,7 +75,7 @@ Real governance at the code level requires three capabilities:
 
 Exceeds AI demonstrates this pattern: tracking usage across Cursor, Claude Code, GitHub Copilot, and Windsurf at the commit and pull request level. Per their customer data analysis, approximately 58% of commits are touched by AI, with an 18% productivity lift observed in mid-market deployments. But more importantly, they can separate AI contributions from human work in a way that satisfies auditors.
 
-Traditional SAST/DAST tools cannot do this. They scan for vulnerabilities, not authorship attribution. Without commit-level metadata, you're flying blind. This is precisely what [context engineering as the missing governance layer](/articles/2026-04-24-context-engineering-the-missing-governance-layer-for-enterprise-ai-coding.md) addresses: governance must happen at the context layer before code is generated, not after it is reviewed.
+Traditional SAST/DAST tools cannot do this. They scan for vulnerabilities, not authorship attribution. Without commit-level metadata, you're flying blind. This is precisely what [context engineering as the missing governance layer](/articles/2026-04-24-context-engineering-the-missing-governance-layer-for-enterprise-ai-coding/) addresses: governance must happen at the context layer before code is generated, not after it is reviewed.
 
 ### 2. Browser-Based Real-Time Enforcement
 

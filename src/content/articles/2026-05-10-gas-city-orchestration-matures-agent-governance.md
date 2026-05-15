@@ -8,11 +8,11 @@ tags: ["competitive-intelligence", "tools-report", "governance", "orchestration"
 author: "Robert"
 editorialSummary: "Gas City's v1.0 SDK launch reframes multi-agent orchestration from 'tool runs agents' to 'SDK builds agent factories.' For teams adopting AI coding agents, this shifts the governance question from workflow automation to runtime control surfaces with versioned work memory and configurable review topologies. Spec Kitty claims workflow governance and spec-to-implementation control; Gas City claims the light-factory observability layer. The boundary matters for buyer decisions around audit trails, context durability, and merge-gate authority."
 heroImage:
-  src: "/generated/tools/2026-05-10-weekly-tools-field-report-weekly-tools-field-report-orchestration-matures-as-gas-city-enters-the-frame-hero.webp"
-  alt: "Abstract tools-landscape image showing SDK-built agent-factory orchestration entering a collaboration lattice of spec cards, work-memory rails, and review gates."
+  src: "/generated/articles/2026-05-10-gas-city-orchestration-matures-agent-governance-hero.webp"
+  alt: "Abstract governance image showing Gas City agent factories as a translation chamber where specs, work memory, and review gates become auditable orchestration infrastructure."
 supportImage:
-  src: "/generated/tools/2026-05-10-weekly-tools-field-report-weekly-tools-field-report-orchestration-matures-as-gas-city-enters-the-frame-support.webp"
-  alt: "Abstract tools-landscape image showing governance boundaries between runtime control, checkpointed work memory, audit ledgers, and spec-to-implementation evidence."
+  src: "/generated/articles/2026-05-10-gas-city-orchestration-matures-agent-governance-support.webp"
+  alt: "Abstract governance image showing versioned agent-factory controls, runtime memory rails, and independent verification gates as accountable evidence."
 references:
   - label: "Gas City GitHub repo"
     url: "https://github.com/gastownhall/gascity"
@@ -56,7 +56,7 @@ This week produced a focused competitor signal set centered on OpenSpec, Entire.
 For Spec Kitty specifically, this week saw release-candidate hardening (3.2.0rc1-rc3) focused on TeamSpace mission-state repair/validation and the implement-review-retrospect control loop. The [audit engine](https://github.com/Priivacy-ai/spec-kitty/pull/948) merged May 2 adds read-only mission-state inspection with seven artifact classifiers—durable audit trail without versioned work memory, aligning with the "light-factory observability" axis from Gas City's framework.
 
 <figure class="article-figure">
-  <img src="/generated/tools/2026-05-10-weekly-tools-field-report-weekly-tools-field-report-orchestration-matures-as-gas-city-enters-the-frame-hero.webp" alt="Abstract tools-landscape image showing SDK-built agent-factory orchestration entering a collaboration lattice of spec cards, work-memory rails, and review gates." />
+  <img src="/generated/articles/2026-05-10-gas-city-orchestration-matures-agent-governance-hero.webp" alt="Abstract governance image showing Gas City agent factories as a translation chamber where specs, work memory, and review gates become auditable orchestration infrastructure." />
   <figcaption>Gas City changes the comparison point: orchestration is no longer only a tool workflow, but a factory surface where specs, work memory, and review gates have to coordinate.</figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ For Spec Kitty specifically, this week saw release-candidate hardening (3.2.0rc1
 Observed this week, ordered by narrative flow:
 
 - **Gas City** ([repo](https://github.com/gastownhall/gascity); [launch post](https://steve-yegge.medium.com/welcome-to-gas-city-57f564bb3607)) - Recent SDK launch reframes Gas Town as composable SDK for observable multi-agent dark factories using MEOW stack (Beads + Dolt); declarative packs/formulas, versioned work memory via Dolt/MEOW, configurable review topologies.
-- **OpenSpec** ([launch page](https://www.ycombinator.com/companies/openspec); [changelog](https://github.com/gdiiio/open-spec?tab=readme-ov-file#changelog)) - Continues shipping integration-layer breadth across multiple agent CLIs, including Qoder CLI, Gemini CLI, RooCode, Cline, iFlow-cli, and Antigravity; Y Combinator launch page positions it as open-source spec framework emphasizing persistent markdown specs, plan review, and broad assistant support.
+- **OpenSpec** ([launch page](https://www.ycombinator.com/companies/openspec); [releases](https://github.com/Fission-AI/OpenSpec/releases)) - Continues shipping integration-layer breadth across multiple agent CLIs, including Qoder CLI, Gemini CLI, RooCode, Cline, iFlow-cli, and Antigravity; Y Combinator launch page positions it as open-source spec framework emphasizing persistent markdown specs, plan review, and broad assistant support.
 - **Entire.io** ([company launch](https://www.entire.io)) - Checkpoint-oriented workflow development; launch materials reinforce commercial momentum; context durability becoming infrastructure.
 - **Spec Kitty** ([CHANGELOG](https://github.com/Priivacy-ai/spec-kitty/blob/main/CHANGELOG.md); [audit engine PR](https://github.com/Priivacy-ai/spec-kitty/pull/948)) - Recent release candidates deliver TeamSpace mission-state repair/validation surface; audit engine merged in early May provides read-only inspection of multiple artifact types; implement-review-retrospect loop stabilization continues.
 - **BMAD-METHOD** ([release](https://github.com/bmad-code-org/BMAD-METHOD/releases/tag/v6.6.0)) - Recent release shows enterprise deployment maturity with non-interactive CI/Docker flags, tool ID validation, channel handling, config robustness; brownfield epic scoping reduces file churn; CSV data integrity fixes demonstrate production hardening.
@@ -142,7 +142,7 @@ Autonomi v0.6.7 desktop app (Apr 30) delivers client/node codebase separation an
 **Plan-review language is mainstreaming.** OpenSpec's YC framing reinforces the idea that the planning phase, not just code generation quality, is becoming a mainstream buying and adoption narrative. That matters more as [the August enforcement cliff](/articles/2026-04-23-the-august-2026-ai-governance-cliff/) turns AI oversight from aspiration into operating pressure. This validates Spec Kitty's mission-review CLI positioning against spec-to-code fidelity.
 
 <figure class="article-figure">
-  <img src="/generated/tools/2026-05-10-weekly-tools-field-report-weekly-tools-field-report-orchestration-matures-as-gas-city-enters-the-frame-support.webp" alt="Abstract tools-landscape image showing governance boundaries between runtime control, checkpointed work memory, audit ledgers, and spec-to-implementation evidence." />
+  <img src="/generated/articles/2026-05-10-gas-city-orchestration-matures-agent-governance-support.webp" alt="Abstract governance image showing versioned agent-factory controls, runtime memory rails, and independent verification gates as accountable evidence." />
   <figcaption>The buyer question is becoming sharper: which layer owns runtime control, which layer preserves context, and which layer produces acceptance evidence that survives review?</figcaption>
 </figure>
 
