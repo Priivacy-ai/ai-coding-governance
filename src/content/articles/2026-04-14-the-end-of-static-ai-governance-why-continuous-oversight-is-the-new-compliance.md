@@ -27,7 +27,7 @@ references:
   - label: "Glean AI governance and phishing statistics"
     url: "https://www.glean.com/perspectives/ai-governance-best-practices"
   - label: "NIST AI Risk Management Framework (May 2025)"
-    url: "https://csrc.nist.gov/pubs/ir/8596/iprd"
+    url: "https://doi.org/10.6028/NIST.IR.8596.iprd"
   - label: "ISO/IEC 23894:2023 AI Risk Management"
     url: "https://www.iso.org/standard/77304.html"
   - label: "ISO/IEC 42001:2023 AI management systems"
@@ -53,7 +53,7 @@ Now boards face a new reality: model drift makes periodic audits obsolete, while
 
 ## The Drift Crisis
 
-Harvard Medical School/MIT research published in [Nature Scientific Reports](https://www.nature.com/articles/s41598-022-15245-z) documents that **91%** of machine learning models show measurable degradation over time—not from bugs or bad data, but because the world changes while models stand still. This is AI aging: a phenomenon that turns monitoring into a governance problem, not just an MLOps task. [NIST's 2025 AI risk-management profile](https://csrc.nist.gov/pubs/ir/8596/iprd) specifically requires real-time continuous monitoring and anomaly detection as a response to this reality.
+Harvard Medical School/MIT research published in [Nature Scientific Reports](https://www.nature.com/articles/s41598-022-15245-z) documents that **91%** of machine learning models show measurable degradation over time—not from bugs or bad data, but because the world changes while models stand still. This is AI aging: a phenomenon that turns monitoring into a governance problem, not just an MLOps task. [NIST's 2025 AI risk-management profile](https://doi.org/10.6028/NIST.IR.8596.iprd) specifically requires real-time continuous monitoring and anomaly detection as a response to this reality.
 
 When your model drifts continuously, governance cannot be an annual exercise or quarterly review. It must be embedded in infrastructure itself.
 
@@ -80,7 +80,7 @@ The [EU Code of Practice for general-purpose AI models](https://digital-strategy
 The new paradigm requires treating governance as infrastructure rather than audit documentation:
 
 - **Embed controls at design time**, not post-deployment
-- **Continuous monitoring as regulatory minimum** under [NIST's 2025 profile](https://csrc.nist.gov/pubs/ir/8596/iprd)
+- **Continuous monitoring as regulatory minimum** under [NIST's 2025 profile](https://doi.org/10.6028/NIST.IR.8596.iprd)
 - **Interoperability through shared standards** such as [ISO/IEC 23894:2023](https://www.iso.org/standard/77304.html)
 - **Real-time anomaly detection** for both drift and adversarial patterns
 

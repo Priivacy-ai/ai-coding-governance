@@ -238,7 +238,11 @@ async function generateImage(kind, imageConfig) {
 		throw new Error(`OpenAI image generation failed for ${kind}: HTTP ${response.status}: ${message}`);
 	}
 	const bytes = await imageBytesFromResult(body?.data?.[0]);
-	const outputPath = path.resolve(imageConfig.outputPath);
+	const imageOutputPath = imageConfig.outputPath ?? imageConfig.path;
+	if (!imageOutputPath) {
+		throw new Error(`OpenAI image config for ${kind} must include outputPath or path`);
+	}
+	const outputPath = path.resolve(imageOutputPath);
 	await writeImageBytes(outputPath, bytes, imageConfig);
 	return {
 		kind,

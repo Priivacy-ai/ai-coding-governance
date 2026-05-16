@@ -400,6 +400,14 @@ ol {
 	gap: 1rem;
 }
 
+.article-main,
+.article-rail,
+.article-header,
+.article-prose {
+	grid-template-columns: minmax(0, 1fr);
+	min-width: 0;
+}
+
 .hero-panel__copy > h1 {
 	font-size: clamp(2.6rem, 5.8vw, 4.95rem);
 }
@@ -775,6 +783,11 @@ h1 + .hero-panel__lede {
 .article-prose h2,
 .article-prose h3 {
 	margin-top: 2rem;
+}
+
+.article-prose a,
+.article-rail a {
+	overflow-wrap: anywhere;
 }
 
 .article-figure,
